@@ -1,0 +1,626 @@
+2017-02-09T16:26:27.736+0800 I CONTROL  [initandlisten] MongoDB starting : pid=653 port=12345 dbpath=/Users/yu/www/personal/mongoDB/mongodb_simple/data 64-bit host=yudeMacBook-Pro.local
+2017-02-09T16:26:27.737+0800 I CONTROL  [initandlisten] db version v3.4.1
+2017-02-09T16:26:27.737+0800 I CONTROL  [initandlisten] git version: 5e103c4f5583e2566a45d740225dc250baacfbd7
+2017-02-09T16:26:27.737+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2k  26 Jan 2017
+2017-02-09T16:26:27.737+0800 I CONTROL  [initandlisten] allocator: system
+2017-02-09T16:26:27.737+0800 I CONTROL  [initandlisten] modules: none
+2017-02-09T16:26:27.737+0800 I CONTROL  [initandlisten] build environment:
+2017-02-09T16:26:27.737+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-02-09T16:26:27.737+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-02-09T16:26:27.737+0800 I CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { port: 12345 }, processManagement: { fork: true }, storage: { dbPath: "data" }, systemLog: { destination: "file", path: "log/mongod.log", verbosity: 5 } }
+2017-02-09T16:26:27.737+0800 D NETWORK  [initandlisten] fd limit hard:9223372036854775807 soft:4864 max conn: 3891
+2017-02-09T16:26:27.737+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7680M,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-02-09T16:26:27.902+0800 D COMMAND  [WTJournalFlusher] BackgroundJob starting: WTJournalFlusher
+2017-02-09T16:26:27.902+0800 D STORAGE  [WTJournalFlusher] starting WTJournalFlusher thread
+2017-02-09T16:26:27.934+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:27.940+0800 D STORAGE  [initandlisten] WT begin_transaction for snapshot id 1
+2017-02-09T16:26:27.940+0800 D STORAGE  [initandlisten] WiredTigerKVEngine::createRecordStore uri: table:_mdb_catalog config: type=file,memory_page_max=10m,split_pct=90,leaf_value_max=64MB,checksum=on,block_compressor=snappy,,key_format=q,value_format=u,app_metadata=(formatVersion=1)
+2017-02-09T16:26:27.957+0800 D STORAGE  [initandlisten] WT commit_transaction for snapshot id 1
+2017-02-09T16:26:27.957+0800 D STORAGE  [initandlisten] WT begin_transaction for snapshot id 2
+2017-02-09T16:26:27.958+0800 D STORAGE  [initandlisten] WiredTigerUtil::checkApplicationMetadataFormatVersion  uri: table:_mdb_catalog ok range 1 -> 1 current: 1
+2017-02-09T16:26:27.965+0800 D STORAGE  [initandlisten] WT rollback_transaction for snapshot id 2
+2017-02-09T16:26:27.965+0800 D STORAGE  [initandlisten] WT begin_transaction for snapshot id 3
+2017-02-09T16:26:27.967+0800 D STORAGE  [initandlisten] WT rollback_transaction for snapshot id 3
+2017-02-09T16:26:27.972+0800 I CONTROL  [initandlisten] 
+2017-02-09T16:26:27.972+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-02-09T16:26:27.972+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-02-09T16:26:27.972+0800 I CONTROL  [initandlisten] 
+2017-02-09T16:26:27.995+0800 D STORAGE  [initandlisten] enter repairDatabases (to check pdfile version #)
+2017-02-09T16:26:27.996+0800 D -        [initandlisten] reloading view catalog for database local
+2017-02-09T16:26:27.997+0800 D STORAGE  [initandlisten] Checking node for SERVER-23299 eligibility
+2017-02-09T16:26:27.997+0800 D STORAGE  [initandlisten] Didn't find local.startup_log
+2017-02-09T16:26:27.997+0800 D STORAGE  [initandlisten] done repairDatabases
+2017-02-09T16:26:27.998+0800 D QUERY    [initandlisten] Running query:
+ns=admin.system.rolesTree: $and
+Sort: {}
+Proj: {}
+2017-02-09T16:26:27.998+0800 D QUERY    [initandlisten] Running query: query: {} sort: {} projection: {}
+2017-02-09T16:26:27.998+0800 D QUERY    [initandlisten] Collection admin.system.roles does not exist. Using EOF plan: query: {} sort: {} projection: {}
+2017-02-09T16:26:27.998+0800 D QUERY    [initandlisten] Not caching executor but returning 0 results.
+2017-02-09T16:26:27.999+0800 I COMMAND  [initandlisten] query admin.system.roles planSummary: EOF ntoreturn:0 ntoskip:0 keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:20 locks:{ Global: { acquireCount: { r: 8, W: 2 } }, Database: { acquireCount: { r: 3 } }, Collection: { acquireCount: { r: 3 } } } 0ms
+2017-02-09T16:26:27.999+0800 D STORAGE  [initandlisten] create collection local.startup_log { capped: true, size: 10485760 }
+2017-02-09T16:26:27.999+0800 D STORAGE  [initandlisten] WT begin_transaction for snapshot id 5
+2017-02-09T16:26:27.999+0800 D STORAGE  [initandlisten] stored meta data for local.startup_log @ RecordId(1)
+2017-02-09T16:26:27.999+0800 D STORAGE  [initandlisten] WiredTigerKVEngine::createRecordStore uri: table:collection-0-3891187427619646654 config: type=file,memory_page_max=10m,split_pct=90,leaf_value_max=64MB,checksum=on,block_compressor=snappy,,key_format=q,value_format=u,app_metadata=(formatVersion=1)
+2017-02-09T16:26:28.009+0800 D STORAGE  [initandlisten] WiredTigerUtil::checkApplicationMetadataFormatVersion  uri: table:collection-0-3891187427619646654 ok range 1 -> 1 current: 1
+2017-02-09T16:26:28.009+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "local.startup_log", ident: "collection-0-3891187427619646654", md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] } }
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] }
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "local.startup_log", ident: "collection-0-3891187427619646654", md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] } }
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] }
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "local.startup_log", ident: "collection-0-3891187427619646654", md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] } }
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] }
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "local.startup_log", ident: "collection-0-3891187427619646654", md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] } }
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] }
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "local.startup_log", ident: "collection-0-3891187427619646654", md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] } }
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] }
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] local.startup_log: clearing plan cache - collection info cache reset
+2017-02-09T16:26:28.010+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.011+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "local.startup_log", ident: "collection-0-3891187427619646654", md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] } }
+2017-02-09T16:26:28.012+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [] }
+2017-02-09T16:26:28.012+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.012+0800 D STORAGE  [initandlisten] recording new metadata: { md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-1-3891187427619646654" }, ns: "local.startup_log", ident: "collection-0-3891187427619646654" }
+2017-02-09T16:26:28.012+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.012+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.012+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-1-3891187427619646654" }, ns: "local.startup_log", ident: "collection-0-3891187427619646654" }
+2017-02-09T16:26:28.012+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.012+0800 D STORAGE  [initandlisten] index create string: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=6,infoObj={ "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "local.startup_log" }),
+2017-02-09T16:26:28.012+0800 D STORAGE  [initandlisten] WiredTigerKVEngine::createSortedDataInterface ident: index-1-3891187427619646654 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=6,infoObj={ "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "local.startup_log" }),
+2017-02-09T16:26:28.012+0800 D STORAGE  [initandlisten] create uri: table:index-1-3891187427619646654 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=6,infoObj={ "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "local.startup_log" }),
+2017-02-09T16:26:28.021+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.021+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-1-3891187427619646654" }, ns: "local.startup_log", ident: "collection-0-3891187427619646654" }
+2017-02-09T16:26:28.021+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.021+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.021+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-1-3891187427619646654" }, ns: "local.startup_log", ident: "collection-0-3891187427619646654" }
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-1-3891187427619646654" }, ns: "local.startup_log", ident: "collection-0-3891187427619646654" }
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] WiredTigerUtil::checkApplicationMetadataFormatVersion  uri: table:index-1-3891187427619646654 ok range 6 -> 8 current: 6
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] local.startup_log: clearing plan cache - collection info cache reset
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-1-3891187427619646654" }, ns: "local.startup_log", ident: "collection-0-3891187427619646654" }
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] recording new metadata: { md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-1-3891187427619646654" }, ns: "local.startup_log", ident: "collection-0-3891187427619646654" }
+2017-02-09T16:26:28.022+0800 D INDEX    [initandlisten] marking index _id_ as ready in snapshot id 5
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] looking up metadata for: local.startup_log @ RecordId(1)
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-1-3891187427619646654" }, ns: "local.startup_log", ident: "collection-0-3891187427619646654" }
+2017-02-09T16:26:28.022+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "local.startup_log", options: { capped: true, size: 10485760 }, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.023+0800 D STORAGE  [initandlisten] WT commit_transaction for snapshot id 5
+2017-02-09T16:26:28.023+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/yu/www/personal/mongoDB/mongodb_simple/data/diagnostic.data'
+2017-02-09T16:26:28.023+0800 D INDEX    [initandlisten] IndexRebuilder::checkNS: local.startup_log
+2017-02-09T16:26:28.023+0800 D INDEX    [initandlisten] checking complete
+2017-02-09T16:26:28.023+0800 D COMMAND  [TTLMonitor] BackgroundJob starting: TTLMonitor
+2017-02-09T16:26:28.023+0800 D -        [initandlisten] reloading view catalog for database admin
+2017-02-09T16:26:28.023+0800 D STORAGE  [initandlisten] WT begin_transaction for snapshot id 6
+2017-02-09T16:26:28.023+0800 D STORAGE  [initandlisten] stored meta data for admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.023+0800 D STORAGE  [initandlisten] WiredTigerKVEngine::createRecordStore uri: table:collection-2-3891187427619646654 config: type=file,memory_page_max=10m,split_pct=90,leaf_value_max=64MB,checksum=on,block_compressor=snappy,,key_format=q,value_format=u,app_metadata=(formatVersion=1)
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] WiredTigerUtil::checkApplicationMetadataFormatVersion  uri: table:collection-2-3891187427619646654 ok range 1 -> 1 current: 1
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "admin.system.version", ident: "collection-2-3891187427619646654", md: { ns: "admin.system.version", options: {}, indexes: [] } }
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [] }
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "admin.system.version", ident: "collection-2-3891187427619646654", md: { ns: "admin.system.version", options: {}, indexes: [] } }
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [] }
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "admin.system.version", ident: "collection-2-3891187427619646654", md: { ns: "admin.system.version", options: {}, indexes: [] } }
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [] }
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "admin.system.version", ident: "collection-2-3891187427619646654", md: { ns: "admin.system.version", options: {}, indexes: [] } }
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [] }
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "admin.system.version", ident: "collection-2-3891187427619646654", md: { ns: "admin.system.version", options: {}, indexes: [] } }
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [] }
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] admin.system.version: clearing plan cache - collection info cache reset
+2017-02-09T16:26:28.033+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { ns: "admin.system.version", ident: "collection-2-3891187427619646654", md: { ns: "admin.system.version", options: {}, indexes: [] } }
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [] }
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten] recording new metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten] index create string: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=6,infoObj={ "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "admin.system.version" }),
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten] WiredTigerKVEngine::createSortedDataInterface ident: index-3-3891187427619646654 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=6,infoObj={ "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "admin.system.version" }),
+2017-02-09T16:26:28.034+0800 D STORAGE  [initandlisten] create uri: table:index-3-3891187427619646654 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=6,infoObj={ "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "admin.system.version" }),
+2017-02-09T16:26:28.034+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:28.042+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.042+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.042+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.042+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.042+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten] WiredTigerUtil::checkApplicationMetadataFormatVersion  uri: table:index-3-3891187427619646654 ok range 6 -> 8 current: 6
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten] admin.system.version: clearing plan cache - collection info cache reset
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.043+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] recording new metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.044+0800 D INDEX    [initandlisten] marking index _id_ as ready in snapshot id 6
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] WT commit_transaction for snapshot id 6
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] WT begin_transaction for snapshot id 7
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] recording new metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654", incompatible_with_version_32: "index-4-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654", incompatible_with_version_32: "index-4-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] index create string: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=8,infoObj={ "v" : 2, "key" : { "version" : 1 }, "name" : "incompatible_with_version_32", "ns" : "admin.system.version" }),
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] WiredTigerKVEngine::createSortedDataInterface ident: index-4-3891187427619646654 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=8,infoObj={ "v" : 2, "key" : { "version" : 1 }, "name" : "incompatible_with_version_32", "ns" : "admin.system.version" }),
+2017-02-09T16:26:28.044+0800 D STORAGE  [initandlisten] create uri: table:index-4-3891187427619646654 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=8,infoObj={ "v" : 2, "key" : { "version" : 1 }, "name" : "incompatible_with_version_32", "ns" : "admin.system.version" }),
+2017-02-09T16:26:28.051+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.051+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654", incompatible_with_version_32: "index-4-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.051+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.051+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.051+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654", incompatible_with_version_32: "index-4-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.051+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.051+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.051+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654", incompatible_with_version_32: "index-4-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.051+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.052+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.052+0800 D STORAGE  [initandlisten] WiredTigerUtil::checkApplicationMetadataFormatVersion  uri: table:index-4-3891187427619646654 ok range 6 -> 8 current: 8
+2017-02-09T16:26:28.052+0800 D STORAGE  [initandlisten] admin.system.version: clearing plan cache - collection info cache reset
+2017-02-09T16:26:28.052+0800 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2017-02-09T16:26:28.052+0800 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-02-09T16:26:28.052+0800 D STORAGE  [initandlisten] WT commit_transaction for snapshot id 7
+2017-02-09T16:26:28.052+0800 D STORAGE  [initandlisten] WT begin_transaction for snapshot id 8
+2017-02-09T16:26:28.053+0800 D INDEX    [initandlisten] 	 bulk commit starting for index: incompatible_with_version_32
+2017-02-09T16:26:28.053+0800 D STORAGE  [initandlisten] WT commit_transaction for snapshot id 8
+2017-02-09T16:26:28.054+0800 D INDEX    [initandlisten] 	 done building bottom layer, going to commit
+2017-02-09T16:26:28.058+0800 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2017-02-09T16:26:28.058+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.058+0800 D STORAGE  [initandlisten] WT begin_transaction for snapshot id 9
+2017-02-09T16:26:28.058+0800 D STORAGE  [initandlisten]  fetched CCE metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654", incompatible_with_version_32: "index-4-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.059+0800 D STORAGE  [initandlisten] returning metadata: md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: false, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }
+2017-02-09T16:26:28.059+0800 D STORAGE  [initandlisten] looking up metadata for: admin.system.version @ RecordId(3)
+2017-02-09T16:26:28.059+0800 D STORAGE  [initandlisten] recording new metadata: { md: { ns: "admin.system.version", options: {}, indexes: [ { spec: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { _id: BinData(0, 00) }, head: 0 }, { spec: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }, ready: true, multikey: false, multikeyPaths: { version: BinData(0, 00) }, head: 0 } ] }, idxIdent: { _id_: "index-3-3891187427619646654", incompatible_with_version_32: "index-4-3891187427619646654" }, ns: "admin.system.version", ident: "collection-2-3891187427619646654" }
+2017-02-09T16:26:28.059+0800 D INDEX    [initandlisten] marking index incompatible_with_version_32 as ready in snapshot id 9
+2017-02-09T16:26:28.059+0800 D STORAGE  [initandlisten] WT commit_transaction for snapshot id 9
+2017-02-09T16:26:28.059+0800 D STORAGE  [initandlisten] WT begin_transaction for snapshot id 10
+2017-02-09T16:26:28.059+0800 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2017-02-09T16:26:28.059+0800 D STORAGE  [initandlisten] WT commit_transaction for snapshot id 10
+2017-02-09T16:26:28.059+0800 D COMMAND  [ClientCursorMonitor] BackgroundJob starting: ClientCursorMonitor
+2017-02-09T16:26:28.059+0800 D COMMAND  [PeriodicTaskRunner] BackgroundJob starting: PeriodicTaskRunner
+2017-02-09T16:26:28.059+0800 I NETWORK  [thread1] waiting for connections on port 12345
+2017-02-09T16:26:28.139+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:28.243+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:28.344+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:28.444+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:28.549+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:28.654+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:28.760+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:28.865+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:28.965+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:29.069+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:29.175+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:29.277+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:29.382+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:29.482+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:29.587+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:29.692+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:29.794+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:29.898+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:30.003+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:30.106+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:30.211+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:30.315+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:30.420+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:30.526+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:30.628+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:30.728+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:30.831+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:30.932+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:31.032+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:31.136+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:31.240+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:31.340+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:31.446+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:31.548+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:31.648+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:31.753+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:31.854+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:31.954+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:32.059+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:32.162+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:32.265+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:32.365+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:32.465+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:32.566+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:32.668+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:32.769+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:32.875+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:32.978+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:33.081+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:33.187+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:33.292+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:33.395+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:33.498+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:33.599+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:33.703+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:33.803+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:33.908+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:34.013+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:34.119+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:34.219+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:34.323+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:34.428+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:34.528+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:34.632+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:34.736+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:34.836+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:34.936+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:35.036+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:35.138+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:35.240+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:35.345+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:35.447+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:35.552+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:35.656+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:35.760+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:35.864+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:35.969+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:36.069+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:36.170+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:36.274+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:36.378+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:36.482+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:36.587+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:36.693+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:36.798+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:36.903+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:37.003+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:37.104+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:37.207+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:37.309+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:37.409+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:37.513+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:37.617+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:37.719+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:37.821+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:37.926+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:38.032+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:38.136+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:38.236+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:38.338+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:38.439+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:38.544+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:38.650+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:38.755+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:38.856+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:38.958+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:39.064+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:39.169+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:39.272+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:39.372+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:39.478+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:39.583+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:39.684+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:39.789+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:39.889+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:39.989+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:40.094+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:40.197+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:40.301+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:40.405+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:40.508+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:40.611+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:40.716+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:40.819+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:40.922+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:41.022+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:41.123+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:41.156+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49501 #1 (1 connection now open)
+2017-02-09T16:26:41.156+0800 D COMMAND  [conn1] run command admin.$cmd { isMaster: 1, client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } } }
+2017-02-09T16:26:41.156+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:49501 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-09T16:26:41.156+0800 D NETWORK  [conn1] Starting server-side compression negotiation
+2017-02-09T16:26:41.156+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1, client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } } } numYields:0 reslen:189 locks:{} protocol:op_query 0ms
+2017-02-09T16:26:41.157+0800 D COMMAND  [conn1] run command admin.$cmd { whatsmyuri: 1 }
+2017-02-09T16:26:41.157+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: whatsmyuri { whatsmyuri: 1 } numYields:0 reslen:47 locks:{} protocol:op_command 0ms
+2017-02-09T16:26:41.158+0800 D COMMAND  [conn1] run command admin.$cmd { buildinfo: 1.0 }
+2017-02-09T16:26:41.158+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: buildInfo { buildinfo: 1.0 } numYields:0 reslen:1438 locks:{} protocol:op_command 0ms
+2017-02-09T16:26:41.159+0800 D COMMAND  [conn1] run command admin.$cmd { getLog: "startupWarnings" }
+2017-02-09T16:26:41.159+0800 D COMMAND  [conn1] command: getLog
+2017-02-09T16:26:41.159+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: getLog { getLog: "startupWarnings" } numYields:0 reslen:446 locks:{} protocol:op_command 0ms
+2017-02-09T16:26:41.159+0800 D COMMAND  [conn1] run command test.$cmd { isMaster: 1.0, forShell: 1.0 }
+2017-02-09T16:26:41.159+0800 D NETWORK  [conn1] Starting server-side compression negotiation
+2017-02-09T16:26:41.159+0800 I COMMAND  [conn1] command test.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0 } numYields:0 reslen:174 locks:{} protocol:op_command 0ms
+2017-02-09T16:26:41.164+0800 D COMMAND  [conn1] run command test.$cmd { buildInfo: 1.0 }
+2017-02-09T16:26:41.164+0800 I COMMAND  [conn1] command test.$cmd appName: "MongoDB Shell" command: buildInfo { buildInfo: 1.0 } numYields:0 reslen:1438 locks:{} protocol:op_command 0ms
+2017-02-09T16:26:41.165+0800 D COMMAND  [conn1] run command test.$cmd { isMaster: 1.0, forShell: 1.0 }
+2017-02-09T16:26:41.165+0800 D NETWORK  [conn1] Starting server-side compression negotiation
+2017-02-09T16:26:41.165+0800 I COMMAND  [conn1] command test.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0 } numYields:0 reslen:174 locks:{} protocol:op_command 0ms
+2017-02-09T16:26:41.165+0800 D COMMAND  [conn1] run command admin.$cmd { replSetGetStatus: 1.0, forShell: 1.0 }
+2017-02-09T16:26:41.166+0800 D COMMAND  [conn1] command: replSetGetStatus
+2017-02-09T16:26:41.166+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: replSetGetStatus { replSetGetStatus: 1.0, forShell: 1.0 } numYields:0 reslen:106 locks:{} protocol:op_command 0ms
+2017-02-09T16:26:41.223+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:41.328+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:41.428+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:41.533+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:41.638+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:41.739+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:41.844+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:41.949+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:42.054+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:42.156+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:42.261+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:42.364+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:42.464+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:42.569+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:42.672+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:42.772+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:42.876+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:42.978+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:43.083+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:43.185+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:43.288+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:43.392+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:43.494+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:43.595+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:43.697+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:43.798+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:43.899+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:44.001+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:44.106+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:44.209+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:44.314+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:44.414+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:44.519+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:44.624+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:44.727+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:44.827+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:44.928+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:45.034+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:45.134+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:45.239+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:45.343+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:45.443+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:45.543+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:45.643+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:45.748+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:45.849+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:45.955+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:46.059+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:46.165+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:46.270+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:46.370+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:46.476+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:46.577+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:46.683+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:46.788+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:46.893+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:46.998+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:47.103+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:47.208+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:47.309+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:47.410+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:47.515+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:47.615+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:47.718+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:47.821+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:47.922+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:48.023+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:48.124+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:48.227+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:48.327+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:48.427+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:48.529+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:48.632+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:48.737+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:48.839+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:48.941+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:49.046+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:49.148+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:49.253+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:49.356+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:49.461+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:49.564+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:49.669+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:49.773+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:49.878+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:49.980+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:50.085+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:50.188+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:50.293+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:50.397+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:50.498+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:50.600+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:50.703+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:50.806+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:50.909+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:51.014+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:51.114+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:51.214+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:51.317+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:51.422+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:51.528+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:51.630+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:51.731+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:51.834+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:51.935+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:52.039+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:52.145+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:52.250+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:52.351+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:52.453+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:52.556+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:52.661+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:52.764+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:52.864+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:52.964+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:53.064+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:53.169+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:53.275+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:53.378+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:53.480+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:53.583+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:53.684+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:53.786+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:53.887+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:53.992+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:54.097+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:54.202+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:54.307+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:54.409+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:54.511+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:54.616+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:54.717+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:54.822+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:54.925+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:55.028+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:55.131+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:55.233+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:55.338+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:55.443+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:55.548+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:55.650+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:55.750+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:55.852+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:55.957+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:56.059+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:56.164+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:56.267+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:56.367+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:56.467+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:56.571+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:56.675+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:56.778+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:56.878+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:56.983+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:57.083+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:57.188+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:57.293+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:57.398+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:57.500+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:57.600+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:57.700+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:57.806+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:57.911+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:58.016+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:58.117+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:58.217+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:58.317+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:58.422+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:58.522+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:58.625+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:58.728+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:58.830+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:58.932+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:59.036+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:59.137+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:59.144+0800 D COMMAND  [conn1] run command test.$cmd { isMaster: 1.0, forShell: 1.0 }
+2017-02-09T16:26:59.145+0800 D NETWORK  [conn1] Starting server-side compression negotiation
+2017-02-09T16:26:59.145+0800 I COMMAND  [conn1] command test.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0 } numYields:0 reslen:174 locks:{} protocol:op_command 0ms
+2017-02-09T16:26:59.240+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:59.343+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:59.448+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:59.554+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:59.659+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:59.762+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:59.867+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:26:59.968+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:00.069+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:00.174+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:00.278+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:00.378+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:00.484+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:00.586+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:00.692+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:00.795+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:00.897+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:00.998+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:01.103+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:01.205+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:01.309+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:01.414+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:01.519+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:01.625+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:01.728+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:01.833+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:01.936+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:02.038+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:02.143+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:02.249+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:02.353+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:02.456+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:02.561+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:02.662+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:02.767+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:02.869+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:02.970+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:03.070+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:03.175+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:03.278+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:03.382+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:03.485+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:03.586+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:03.686+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:03.788+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:03.888+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:03.993+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:04.098+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:04.203+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:04.304+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:04.383+0800 D COMMAND  [conn1] run command admin.$cmd { isMaster: 1.0, forShell: 1.0 }
+2017-02-09T16:27:04.384+0800 D NETWORK  [conn1] Starting server-side compression negotiation
+2017-02-09T16:27:04.384+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0 } numYields:0 reslen:174 locks:{} protocol:op_command 0ms
+2017-02-09T16:27:04.410+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:04.515+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:04.620+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:04.725+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:04.828+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:04.933+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:05.038+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:05.138+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:05.240+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:05.346+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:05.450+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:05.553+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:05.656+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:05.762+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:05.862+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:05.963+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:06.068+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:06.171+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:06.276+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:06.378+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:06.483+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:06.588+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:06.693+0800 D STORAGE  [WTJournalFlusher] flushed journal
+2017-02-09T16:27:06.706+0800 D COMMAND  [conn1] run command admin.$cmd { shutdown: 1.0 }
+2017-02-09T16:27:06.706+0800 D COMMAND  [conn1] command: shutdown
+2017-02-09T16:27:06.706+0800 I COMMAND  [conn1] terminating, shutdown command received
+2017-02-09T16:27:06.706+0800 I NETWORK  [conn1] shutdown: going to close listening sockets...
+2017-02-09T16:27:06.706+0800 I NETWORK  [conn1] closing listening socket: 7
+2017-02-09T16:27:06.707+0800 I NETWORK  [conn1] closing listening socket: 8
+2017-02-09T16:27:06.707+0800 I NETWORK  [conn1] removing socket file: /tmp/mongodb-12345.sock
+2017-02-09T16:27:06.707+0800 I NETWORK  [conn1] shutdown: going to flush diaglog...
+2017-02-09T16:27:06.713+0800 I FTDC     [conn1] Shutting down full-time diagnostic data capture
+2017-02-09T16:27:06.715+0800 D STORAGE  [conn1] ~WiredTigerRecordStore for: admin.system.version
+2017-02-09T16:27:06.715+0800 D STORAGE  [conn1] ~WiredTigerRecordStore for: local.startup_log
+2017-02-09T16:27:06.715+0800 D STORAGE  [conn1] ~WiredTigerRecordStore for: _mdb_catalog
+2017-02-09T16:27:06.715+0800 I STORAGE  [conn1] WiredTigerKVEngine shutting down
+2017-02-09T16:27:06.715+0800 D STORAGE  [conn1] WiredTigerSizeStorer::storeInto table:_mdb_catalog -> { numRecords: 3, dataSize: 1024 }
+2017-02-09T16:27:06.715+0800 D STORAGE  [conn1] WiredTigerSizeStorer::storeInto table:collection-0-3891187427619646654 -> { numRecords: 1, dataSize: 1797 }
+2017-02-09T16:27:06.715+0800 D STORAGE  [conn1] WiredTigerSizeStorer::storeInto table:collection-2-3891187427619646654 -> { numRecords: 1, dataSize: 59 }
+2017-02-09T16:27:06.795+0800 D STORAGE  [WTJournalFlusher] stopping WTJournalFlusher thread
+2017-02-09T16:27:06.872+0800 I STORAGE  [conn1] shutdown: removing fs lock...
+2017-02-09T16:27:06.873+0800 I CONTROL  [conn1] now exiting
+2017-02-09T16:27:06.873+0800 I CONTROL  [conn1] shutting down with code:0
